@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  headername:string="ZWOOF";
+  headername:string="Saurabh Mulay";
   
   header_items:string[]=[...this.headername];
 
