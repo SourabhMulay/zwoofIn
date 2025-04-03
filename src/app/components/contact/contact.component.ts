@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { environment } from '../../../../environment';
+
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +15,6 @@ export class ContactComponent {
   public sendEmail(e: Event) {
     e.preventDefault();
    
-
     emailjs
       .sendForm(environment.service_id, environment.template_id, e.target as HTMLFormElement, {
         publicKey: '',
