@@ -16,7 +16,7 @@ export class ContactComponent {
     e.preventDefault();
    
     emailjs
-      .sendForm(environment.service_id, environment.template_id, e.target as HTMLFormElement, {
+      .sendForm('', '', e.target as HTMLFormElement, {
         publicKey: '',
       })
       .then(
