@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LowerHeaderComponent } from '../lower-header/lower-header.component';
+import { RouterOutlet } from '@angular/router';
+
 @Component({
   selector: 'app-header',
-  imports: [CommonModule],
+  imports: [CommonModule, LowerHeaderComponent,RouterOutlet],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

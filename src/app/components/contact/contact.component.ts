@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from '../../../../environment';
 
 
 @Component({
@@ -16,8 +17,8 @@ export class ContactComponent {
     e.preventDefault();
    
     emailjs
-      .sendForm('', '', e.target as HTMLFormElement, {
-        publicKey: '',
+      .sendForm(environment.service_id, environment.template_id, e.target as HTMLFormElement, {
+        publicKey: environment.apiKey,
       })
       .then(
         () => {

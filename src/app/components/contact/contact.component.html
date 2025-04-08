@@ -1,4 +1,10 @@
-<form class="flex flex-col max-w-md mx-auto p-6 border border-gray-300 rounded-lg shadow-md bg-white m-24" (submit)="sendEmail($event)">
+<div class=" flex text-3xl justify-center p-12 m-12 bg-gray-100 font-light">
+    Let's Connect
+    I'm always excited to hear from you! Whether you have a question, a collaboration idea, or just want to say hello—fill out the form below and I’ll get back to you as soon as I can.
+    Your message matters, and I can't wait to read it. 💬✨    
+</div>
+
+<form class="flex flex-col max-w-md mx-auto p-6 border border-gray-300 rounded-lg shadow-md bg-white m-14" (submit)="sendEmail($event)">
     <div class="flex flex-col space-y-4">
         <div>
             <label class="block text-gray-700 font-medium mb-1">Name</label>
@@ -22,3 +28,38 @@
         <h4 class="text-xl bg-green">{{success_message}}</h4>
     </div>
 </form>
+<div class="">
+    <hr class="m-24">
+</div>
+
+<footer class="bg-gray-900 text-gray-200 py-10 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-2xl font-semibold mb-2">Let's Connect</h2>
+      <p class="mb-4 text-gray-400">
+        I'd love to hear from you! Whether you have a question, a project idea, or just want to say hello—
+        feel free to reach out or connect with me below.
+      </p>
+  
+      <div class="flex justify-center space-x-6 mt-6">
+        <a
+          href="https://in.linkedin.com/in/saurabh-mulay-2b124a164"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-blue-400 transition"
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/SourabhMulay"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-purple-400 transition"
+        >
+          GitHub
+        </a>
+      </div>
+  
+      <p class="text-xs text-gray-500 mt-8">&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+  
