@@ -1,65 +1,53 @@
-<div class=" flex text-3xl justify-center p-12 m-12 bg-gray-100 font-light">
-    Let's Connect
-    I'm always excited to hear from you! Whether you have a question, a collaboration idea, or just want to say hello—fill out the form below and I’ll get back to you as soon as I can.
-    Your message matters, and I can't wait to read it. 💬✨    
-</div>
-
-<form class="flex flex-col max-w-md mx-auto p-6 border border-gray-300 rounded-lg shadow-md bg-white m-14" (submit)="sendEmail($event)">
-    <div class="flex flex-col space-y-4">
-        <div>
-            <label class="block text-gray-700 font-medium mb-1">Name</label>
-            <input type="text" name="user_name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-        
-        <div>
-            <label class="block text-gray-700 font-medium mb-1">Email</label>
-            <input type="email" name="user_email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-
-        <div>
-            <label class="block text-gray-700 font-medium mb-1">Message</label>
-            <textarea name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        </div>
-
-        <input type="submit" value="Send" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 cursor-pointer transition">
-    </div>
-
-    <div>
-        <h4 class="text-xl bg-green">{{success_message}}</h4>
-    </div>
-</form>
-<div class="">
-    <hr class="m-24">
-</div>
-
-<footer class="bg-gray-900 text-gray-200 py-10 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-2xl font-semibold mb-2">Let's Connect</h2>
-      <p class="mb-4 text-gray-400">
-        I'd love to hear from you! Whether you have a question, a project idea, or just want to say hello—
-        feel free to reach out or connect with me below.
-      </p>
+<!-- Video Section With Form Overlaid -->
+<div class="py-24 bg-black">
+    <!-- Background YouTube Video -->
+    <iframe 
+      class="absolute top-0 left-0 w-full h-full object-cover z-0"
+      src="https://www.youtube.com/embed/SM2LK5AMhyk?autoplay=1&modestbranding=1&rel=0&controls=0&showinfo=0&mute=1&loop=1&playlist=SM2LK5AMhyk"
+      title="YouTube video player"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
   
-      <div class="flex justify-center space-x-6 mt-6">
-        <a
-          href="https://in.linkedin.com/in/saurabh-mulay-2b124a164"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-blue-400 transition"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://github.com/SourabhMulay"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-purple-400 transition"
-        >
-          GitHub
-        </a>
+    <!-- Overlayed Content -->
+    <div class="relative z-10 bg-black/50 backdrop-blur-sm text-white py-16 px-4">
+      <div class="text-center text-3xl mb-12 max-w-4xl mx-auto font-light">
+        <p>Let's Connect</p>
+        <p>
+          I'm always excited to hear from you! Whether you have a question, a collaboration idea, or just want to say hello—fill out the form below and I’ll get back to you as soon as I can.
+          Your message matters, and I can't wait to read it. 💬✨    
+        </p>
       </div>
   
-      <p class="text-xs text-gray-500 mt-8">&copy; 2025 Your Name. All rights reserved.</p>
+      <!-- Contact Form -->
+      <form class="flex flex-col max-w-md mx-auto p-6 border border-gray-300 rounded-lg shadow-md bg-white bg-opacity-90 text-black" (submit)="sendEmail($event)">
+        <div class="flex flex-col space-y-4">
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Name</label>
+            <input type="text" name="user_name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Email</label>
+            <input type="email" name="user_email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Message</label>
+            <textarea name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+          <input type="submit" value="Send" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 cursor-pointer transition">
+        </div>
+        <div>
+          <h4 class="text-xl text-green-600 mt-4">{{success_message}}</h4>
+        </div>
+      </form>
+  
+      <!-- Footer -->
+      <div class="mt-24">
+        <hr class="my-12 border-white/30">
+        <app-footer></app-footer>
+      </div>
     </div>
-  </footer>
+  </div>
   

@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { environment } from '../../../../environment';
-
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [FooterComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

@@ -1,7 +1,11 @@
-<div class="flex p-3 justify-center gap-2 bg-[rgb(32,35,42)] ">
-    <div class="text-5xl font-bold text-white" *ngFor="let item of header_items">
-        {{item}}
+<div class="fixed w-full left-0 top-0 z-100">
+    <div class="flex p-3 justify-center gap-2 bg-[rgb(32,35,42)] ">
+        <div class="text-5xl font-bold text-white" *ngFor="let item of header_items">
+            {{item}}
+        </div>
     </div>
+    <app-lower-header></app-lower-header>
 </div>
-<app-lower-header></app-lower-header>
-<router-outlet></router-outlet>
+<div class="static ">
+    <router-outlet></router-outlet>
+</div>
